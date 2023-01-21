@@ -111,8 +111,22 @@ class _DetailScreenState extends State<DetailScreen> {
                           Container(
                             margin: const EdgeInsets.only(bottom: 10),
                             decoration: BoxDecoration(
-                                color: Colors.green.shade500,
-                                borderRadius: BorderRadius.circular(20)),
+                              color: Colors.white,
+                              border: const Border(
+                                top: BorderSide(color: Colors.green),
+                                left: BorderSide(color: Colors.green),
+                                right: BorderSide(color: Colors.green),
+                                bottom: BorderSide(color: Colors.green),
+                              ),
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 15,
+                                  offset: const Offset(5, 5),
+                                  color: Colors.black.withOpacity(0.5),
+                                ),
+                              ],
+                            ),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 20),
@@ -123,12 +137,14 @@ class _DetailScreenState extends State<DetailScreen> {
                                   Text(
                                     episode.title,
                                     style: const TextStyle(
-                                      color: Colors.white,
+                                      color: Colors.green,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   const Icon(
                                     Icons.chevron_right_rounded,
-                                    color: Colors.white,
+                                    color: Colors.green,
                                   ),
                                 ],
                               ),
